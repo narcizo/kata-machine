@@ -107,7 +107,7 @@ export default class SinglyLinkedList<T> {
         return node?.value;
     }
 
-    getNode(idx: number): Node<T> | undefined{
+    private getNode(idx: number): Node<T> | undefined{
         if (idx > this.length) return undefined;
 
         let node = this.head;
@@ -119,7 +119,7 @@ export default class SinglyLinkedList<T> {
         return node;
     }
 
-    newNode(item: T): Node<T>{
+    private newNode(item: T): Node<T>{
         return {
             value: item
         } as Node<T>;

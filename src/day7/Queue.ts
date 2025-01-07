@@ -8,11 +8,13 @@ export default class Queue<T> {
 
     enqueue(item: T): void {
 
-}
-    deque(): T | undefined {
+    }
 
-}
+    deque(): T | undefined {
+        return undefined;
+    }
+
     peek(): T | undefined {
 
-}
+    }  
 }

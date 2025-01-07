@@ -8,11 +8,13 @@ export default class Stack<T> {
 
     push(item: T): void {
 
-}
+    }
+
     pop(): T | undefined {
+        return undefined;
+    }
 
-}
     peek(): T | undefined {
-
-}
+        
+    }
 }
