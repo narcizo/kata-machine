@@ -19,15 +19,16 @@ export default class Queue<T> {
             value: item,
         } as Node<T>;
 
-        if(!this.head && !this.tail){
-            this.head = node;
-            this.tail = node;
-        } else {
-            this.tail!.next = node;
-            this.tail = node; 
-        }
-
         this.length++;
+        
+        if(this.head && this.tail){
+            this.tail.next = node;
+            this.tail = node;
+            return;
+        }
+        
+        this.head = node;
+        this.tail = node;
     }
 
     deque(): T | undefined {
