@@ -33,14 +33,8 @@ export default class ArrayList<T> {
 
     remove(item: T): T | undefined {
         if (this.length === 0) return;
-        let idx = -1;
 
-        for (let i = 0; i < this.length; i++) {
-            if (this.arr[i] === item) {
-                idx = i;
-                break;
-            }
-        }
+        const idx = this.arr.findIndex(el => el === item);
 
         if (idx === -1) return;
 
